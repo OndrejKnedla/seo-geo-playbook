@@ -1,0 +1,30 @@
+# Per-site config for the DataForSEO toolkit. Copy this to site.yaml and edit.
+domain: example.com
+
+# Market. location_code: 2840 = United States, 2826 = United Kingdom, 2276 = Germany.
+# Full list: https://docs.dataforseo.com/v3/appendix/locations/
+location_code: 2840
+language_code: en
+
+# OnPage crawl depth.
+max_crawl_pages: 100
+
+# Seed keywords for keyword research. Group them by intent so the reports are readable:
+# core product, distinctive value / USP, fresh / low-competition topics, and bottom-funnel.
+keyword_seeds:
+  - your core category term
+  - best <category> for <audience>
+  - <category> software
+  - <your USP feature>
+  - <category> pricing
+  - <integration or platform> integration
+
+# Known competitors (root domains) for the overlap and content-gap analysis.
+competitors:
+  - competitor-one.com
+  - competitor-two.com
+
+# Optional content-gap filters: only keep gaps whose keyword contains a whitelist term,
+# and drop any containing a blacklist term. Leave empty to keep everything.
+content_gaps_whitelist: []
+content_gaps_blacklist: []

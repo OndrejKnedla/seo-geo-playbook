@@ -1,0 +1,15 @@
+{
+  "name": "seo-geo-playbook-ok",
+  "owner": { "name": "Ondrej Knedla", "url": "https://github.com/OndrejKnedla" },
+  "metadata": {
+    "description": "SEO + GEO toolkit for Claude Code: audit, llms.txt, AI-citation tracking, fixes.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "seo-geo-playbook-ok",
+      "source": ".",
+      "description": "Audit a site the way an AI answer engine sees it, score it A-F, generate llms.txt, track AI citations, and ship fixes as small PRs."
+    }
+  ]
+}

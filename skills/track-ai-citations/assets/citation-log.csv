@@ -1,0 +1,4 @@
+date,checkpoint,engine,queries_total,queries_cited,citation_rate_pct,notes
+2026-01-01,baseline,ChatGPT,30,4,13,raw site before any GEO work
+2026-01-01,baseline,Perplexity,30,5,17,
+2026-01-01,baseline,Google-AIO,30,3,10,

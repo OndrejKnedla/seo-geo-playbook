@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Citation Rate Trend</title>
+<style>
+  body { margin:0; background:#0b0d10; color:#e8edf2;
+    font:15px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  .card { max-width:720px; margin:40px auto; background:#15181d; border:1px solid #262b33;
+    border-radius:16px; padding:28px; }
+  h1 { font-size:18px; margin:0 0 2px; } .src { color:#8b95a3; font-size:12px; margin:14px 0 0; }
+  .legend { display:flex; gap:18px; margin:6px 0 18px; font-size:13px; color:#8b95a3; }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>AI citation rate on a fixed 30-query set</h1>
+  <div class="legend" id="legend"></div>
+  <svg id="chart" viewBox="0 0 680 320" width="100%"></svg>
+  <p class="src">Source: your own re-tested query set (incognito), baseline / +30 / +90 days. Edit the DATA array.</p>
+</div>
+<script>
+// Edit this. One object per series (engine). Values are citation-rate % per checkpoint.
+const LABELS = ["Baseline", "+30 days", "+90 days"];
+const DATA = [
+  { name: "ChatGPT",    color: "#3ddc84", values: [13, 22, 30] },
+  { name: "Perplexity", color: "#7ee787", values: [17, 26, 34] },
+  { name: "Google AIO", color: "#f2cc60", values: [10, 16, 24] },
+];
+const W = 680, H = 320, P = 44, maxY = 40;
+const x = i => P + (W - P*2) * (i / (LABELS.length - 1));
+const y = v => H - P - (H - P*2) * (v / maxY);
+const svg = document.getElementById("chart");
+let s = "";
+// gridlines + y labels
+for (let v = 0; v <= maxY; v += 10) {
+  s += `<line x1="${P}" y1="${y(v)}" x2="${W-P}" y2="${y(v)}" stroke="#262b33"/>`;
+  s += `<text x="${P-8}" y="${y(v)+4}" fill="#8b95a3" font-size="11" text-anchor="end">${v}%</text>`;
+}
+// x labels
+LABELS.forEach((l, i) => s += `<text x="${x(i)}" y="${H-P+20}" fill="#8b95a3" font-size="12" text-anchor="middle">${l}</text>`);
+// series
+DATA.forEach(ser => {
+  const pts = ser.values.map((v, i) => `${x(i)},${y(v)}`).join(" ");
+  s += `<polyline points="${pts}" fill="none" stroke="${ser.color}" stroke-width="2.5"/>`;
+  ser.values.forEach((v, i) => {
+    s += `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${ser.color}"/>`;
+    s += `<text x="${x(i)}" y="${y(v)-10}" fill="${ser.color}" font-size="11" text-anchor="middle">${v}%</text>`;
+  });
+});
+svg.innerHTML = s;
+document.getElementById("legend").innerHTML = DATA.map(d =>
+  `<span><span class="dot" style="background:${d.color}"></span>${d.name}</span>`).join("");
+</script>
+</body>
+</html>

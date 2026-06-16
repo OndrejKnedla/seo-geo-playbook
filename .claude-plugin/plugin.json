@@ -1,0 +1,23 @@
+{
+  "name": "seo-geo-playbook-ok",
+  "version": "1.0.0",
+  "description": "SEO + GEO toolkit as Claude Code skills: audit a site the way an AI answer engine sees it, score it A-F, generate llms.txt, track AI citations, and ship fixes as small PRs.",
+  "author": { "name": "Ondrej Knedla", "url": "https://github.com/OndrejKnedla" },
+  "homepage": "https://github.com/OndrejKnedla/seo-geo-playbook-ok",
+  "repository": "https://github.com/OndrejKnedla/seo-geo-playbook-ok",
+  "license": "MIT",
+  "keywords": ["seo", "geo", "aeo", "generative-engine-optimization", "answer-engine-optimization", "llms-txt", "structured-data", "ai-search", "claude-code", "claude-skills", "chatgpt", "perplexity", "schema"],
+  "skills": [
+    "skills/seo-geo-audit",
+    "skills/generate-llms-txt",
+    "skills/track-ai-citations",
+    "skills/seo-geo-fix",
+    "skills/geo-charts"
+  ],
+  "agents": [
+    "agents/seo-agent.md",
+    "agents/geo-agent.md",
+    "agents/reviewer-agent.md",
+    "agents/trend-agent.md"
+  ]
+}

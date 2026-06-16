@@ -1,0 +1,51 @@
+name: SEO + GEO Audit
+
+# Runs the deterministic SEO/GEO audit against a live URL and fails the run if the
+# foundational score drops below a threshold. Use it as a quality gate on deploys, or
+# on a schedule to catch regressions (a canonical bug, a blocked AI crawler) early.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL to audit"
+        required: true
+      max_pages:
+        description: "Max pages to crawl"
+        required: false
+        default: "10"
+  schedule:
+    - cron: "0 6 * * 1" # every Monday 06:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      # Set repo variable AUDIT_URL for scheduled runs, or pass `url` on dispatch.
+      URL: ${{ github.event.inputs.url || vars.AUDIT_URL }}
+      MAX_PAGES: ${{ github.event.inputs.max_pages || '10' }}
+      MIN_SCORE: ${{ vars.MIN_FOUNDATIONAL_SCORE || '70' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run audit
+        run: |
+          if [ -z "$URL" ]; then echo "No URL. Set repo variable AUDIT_URL or dispatch with url."; exit 1; fi
+          node skills/seo-geo-audit/scripts/audit.mjs "$URL" --max-pages="$MAX_PAGES" --out=seo-geo-audit.json
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-geo-audit
+          path: seo-geo-audit.json
+      - name: Enforce threshold
+        run: |
+          SCORE=$(node -e "console.log(require('./seo-geo-audit.json').scoring.foundationalScore)")
+          echo "Foundational score: $SCORE (min $MIN_SCORE)"
+          echo "### SEO+GEO foundational score: $SCORE / 100" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$SCORE" -lt "$MIN_SCORE" ]; then echo "Below threshold."; exit 1; fi

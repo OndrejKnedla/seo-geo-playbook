@@ -1,0 +1,594 @@
+{
+  "meta": {
+    "tool": "seo-geo-playbook-ok",
+    "version": "1.0",
+    "url": "https://www.anthropic.com",
+    "crawledPages": 6,
+    "generatedNote": "foundational only; combine with INTELLIGENCE-RUBRIC for final grade"
+  },
+  "scoring": {
+    "foundationalScore": 78,
+    "foundationalGrade": "C",
+    "categories": [
+      {
+        "name": "E-E-A-T",
+        "score": 0,
+        "checks": 1
+      },
+      {
+        "name": "Structured Data",
+        "score": 36,
+        "checks": 3
+      },
+      {
+        "name": "AI/GEO",
+        "score": 61,
+        "checks": 6
+      },
+      {
+        "name": "Core SEO",
+        "score": 86,
+        "checks": 6
+      },
+      {
+        "name": "Technical",
+        "score": 100,
+        "checks": 6
+      },
+      {
+        "name": "Crawlability",
+        "score": 100,
+        "checks": 1
+      },
+      {
+        "name": "Content",
+        "score": 100,
+        "checks": 2
+      },
+      {
+        "name": "Social",
+        "score": 100,
+        "checks": 1
+      },
+      {
+        "name": "Images",
+        "score": 100,
+        "checks": 1
+      },
+      {
+        "name": "Mobile",
+        "score": 100,
+        "checks": 1
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "https",
+      "category": "Technical",
+      "weight": 3,
+      "status": "PASS",
+      "score": 100,
+      "detail": "Served over HTTPS"
+    },
+    {
+      "id": "http-status",
+      "category": "Technical",
+      "weight": 3,
+      "status": "PASS",
+      "score": 100,
+      "detail": "Start URL returned 200"
+    },
+    {
+      "id": "host-consistency",
+      "category": "Technical",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "Final host: https://www.anthropic.com/"
+    },
+    {
+      "id": "sitemap",
+      "category": "Technical",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "sitemap.xml found (457 urls)"
+    },
+    {
+      "id": "robots-txt",
+      "category": "Technical",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "robots.txt present"
+    },
+    {
+      "id": "ai-bots-allowed",
+      "category": "AI/GEO",
+      "weight": 5,
+      "status": "PASS",
+      "score": 100,
+      "detail": "No AI crawlers blocked in robots.txt"
+    },
+    {
+      "id": "llms-txt",
+      "category": "AI/GEO",
+      "weight": 1,
+      "status": "WARN",
+      "score": 50,
+      "detail": "No /llms.txt (cheap insurance, not a driver)"
+    },
+    {
+      "id": "title",
+      "category": "Core SEO",
+      "weight": 4,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of pages have a usable <title>"
+    },
+    {
+      "id": "title-length",
+      "category": "Core SEO",
+      "weight": 2,
+      "status": "WARN",
+      "score": 50,
+      "detail": "50% of titles in the 30-65 char sweet spot"
+    },
+    {
+      "id": "meta-description",
+      "category": "Core SEO",
+      "weight": 3,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of pages have a meta description"
+    },
+    {
+      "id": "canonical-present",
+      "category": "Core SEO",
+      "weight": 3,
+      "status": "WARN",
+      "score": 50,
+      "detail": "83% of pages declare a canonical"
+    },
+    {
+      "id": "canonical-self",
+      "category": "Core SEO",
+      "weight": 4,
+      "status": "PASS",
+      "score": 100,
+      "detail": "83% of pages self-canonicalize"
+    },
+    {
+      "id": "h1-single",
+      "category": "Core SEO",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of pages have exactly one <h1>"
+    },
+    {
+      "id": "noindex",
+      "category": "Crawlability",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "No unexpected noindex on crawled pages"
+    },
+    {
+      "id": "content-in-server-html",
+      "category": "Content",
+      "weight": 4,
+      "status": "PASS",
+      "score": 100,
+      "detail": "Every crawled page has substantive text in the server HTML"
+    },
+    {
+      "id": "title-unique",
+      "category": "Content",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "All crawled titles are unique"
+    },
+    {
+      "id": "jsonld-present",
+      "category": "Structured Data",
+      "weight": 4,
+      "status": "FAIL",
+      "score": 0,
+      "detail": "17% of pages ship JSON-LD in the SERVER HTML (curl-visible)"
+    },
+    {
+      "id": "jsonld-valid",
+      "category": "Structured Data",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of JSON-LD blocks parse cleanly"
+    },
+    {
+      "id": "org-schema",
+      "category": "Structured Data",
+      "weight": 1,
+      "status": "WARN",
+      "score": 50,
+      "detail": "No Organization/WebSite entity"
+    },
+    {
+      "id": "open-graph",
+      "category": "Social",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of pages have og:title + og:image"
+    },
+    {
+      "id": "img-alt",
+      "category": "Images",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of <img> have an alt attribute (0/11 missing)"
+    },
+    {
+      "id": "html-lang",
+      "category": "Technical",
+      "weight": 1,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of pages declare <html lang>"
+    },
+    {
+      "id": "viewport",
+      "category": "Mobile",
+      "weight": 1,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of pages declare a viewport"
+    },
+    {
+      "id": "geo-answer-first",
+      "category": "AI/GEO",
+      "weight": 3,
+      "status": "FAIL",
+      "score": 0,
+      "detail": "0% of pages open with an answer/TL;DR block (answer-first = 4.8x citations)"
+    },
+    {
+      "id": "geo-question-headings",
+      "category": "AI/GEO",
+      "weight": 2,
+      "status": "PASS",
+      "score": 100,
+      "detail": "100% of pages use question-style headings / FAQ structure"
+    },
+    {
+      "id": "geo-evidence",
+      "category": "AI/GEO",
+      "weight": 2,
+      "status": "WARN",
+      "score": 50,
+      "detail": "33% of pages carry specific numbers/dates (stats = +40% citation)"
+    },
+    {
+      "id": "geo-freshness",
+      "category": "AI/GEO",
+      "weight": 1,
+      "status": "FAIL",
+      "score": 0,
+      "detail": "0% of pages expose a published/modified date"
+    },
+    {
+      "id": "geo-author",
+      "category": "E-E-A-T",
+      "weight": 2,
+      "status": "FAIL",
+      "score": 0,
+      "detail": "0% of pages name a human author (highest-leverage E-E-A-T fix for YMYL)"
+    }
+  ],
+  "prioritizedFixes": [
+    {
+      "id": "jsonld-present",
+      "category": "Structured Data",
+      "severity": "FAIL",
+      "weight": 4,
+      "detail": "17% of pages ship JSON-LD in the SERVER HTML (curl-visible)"
+    },
+    {
+      "id": "geo-answer-first",
+      "category": "AI/GEO",
+      "severity": "FAIL",
+      "weight": 3,
+      "detail": "0% of pages open with an answer/TL;DR block (answer-first = 4.8x citations)"
+    },
+    {
+      "id": "canonical-present",
+      "category": "Core SEO",
+      "severity": "WARN",
+      "weight": 3,
+      "detail": "83% of pages declare a canonical"
+    },
+    {
+      "id": "geo-author",
+      "category": "E-E-A-T",
+      "severity": "FAIL",
+      "weight": 2,
+      "detail": "0% of pages name a human author (highest-leverage E-E-A-T fix for YMYL)"
+    },
+    {
+      "id": "title-length",
+      "category": "Core SEO",
+      "severity": "WARN",
+      "weight": 2,
+      "detail": "50% of titles in the 30-65 char sweet spot"
+    },
+    {
+      "id": "geo-evidence",
+      "category": "AI/GEO",
+      "severity": "WARN",
+      "weight": 2,
+      "detail": "33% of pages carry specific numbers/dates (stats = +40% citation)"
+    },
+    {
+      "id": "geo-freshness",
+      "category": "AI/GEO",
+      "severity": "FAIL",
+      "weight": 1,
+      "detail": "0% of pages expose a published/modified date"
+    },
+    {
+      "id": "llms-txt",
+      "category": "AI/GEO",
+      "severity": "WARN",
+      "weight": 1,
+      "detail": "No /llms.txt (cheap insurance, not a driver)"
+    },
+    {
+      "id": "org-schema",
+      "category": "Structured Data",
+      "severity": "WARN",
+      "weight": 1,
+      "detail": "No Organization/WebSite entity"
+    }
+  ],
+  "pagesForReview": [
+    {
+      "url": "https://www.anthropic.com/careers/jobs",
+      "title": "Jobs \\ Anthropic",
+      "metaDescription": "Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.",
+      "h1Count": 1,
+      "headings": [
+        "H1: Join our team",
+        "H2: AI Research &amp; Engineering",
+        "H2: Applied AI",
+        "H2: Communications",
+        "H2: Compute",
+        "H2: Data Science &amp; Analytics",
+        "H2: Engineering &amp; Design - Product",
+        "H2: Finance",
+        "H2: Legal",
+        "H2: Marketing &amp; Brand",
+        "H2: People",
+        "H2: Product Management, Support, &amp; Operations",
+        "H2: Public Benefit",
+        "H2: Public Policy",
+        "H2: Safeguards (Trust &amp; Safety)",
+        "H2: Sales",
+        "H2: Security",
+        "H2: Software Engineering - Infrastructure",
+        "H2: Technical Education",
+        "H2: Technical Program Management",
+        "H3: Products",
+        "H3: Models",
+        "H3: Solutions",
+        "H3: Claude Platform",
+        "H3: Resources"
+      ],
+      "schemaTypes": [],
+      "wordCount": 5132,
+      "internalLinkCount": 36,
+      "author": null,
+      "datePublished": null,
+      "dateModified": null,
+      "geoSignals": {
+        "hasFaqSchema": false,
+        "hasTable": false,
+        "hasTldr": false,
+        "questionHeadings": 3,
+        "stats": 1,
+        "author": null,
+        "datePublished": null,
+        "dateModified": null
+      }
+    },
+    {
+      "url": "https://www.anthropic.com/ai-for-science-program-rules",
+      "title": "Anthropic’s AI for Science Program \\ Anthropic",
+      "metaDescription": "Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.",
+      "h1Count": 1,
+      "headings": [
+        "H1: Anthropic’s AI for Science Program Official Rules",
+        "H3: Products",
+        "H3: Models",
+        "H3: Solutions",
+        "H3: Claude Platform",
+        "H3: Resources",
+        "H3: Help and security",
+        "H3: Company",
+        "H3: Terms and policies"
+      ],
+      "schemaTypes": [],
+      "wordCount": 1863,
+      "internalLinkCount": 36,
+      "author": null,
+      "datePublished": null,
+      "dateModified": null,
+      "geoSignals": {
+        "hasFaqSchema": false,
+        "hasTable": false,
+        "hasTldr": false,
+        "questionHeadings": 1,
+        "stats": 3,
+        "author": null,
+        "datePublished": null,
+        "dateModified": null
+      }
+    },
+    {
+      "url": "https://www.anthropic.com/careers",
+      "title": "Careers \\ Anthropic",
+      "metaDescription": "Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.",
+      "h1Count": 1,
+      "headings": [
+        "H1: Shape how AI meets the world",
+        "H3: Building Anthropic",
+        "H2: Principles that guide how we show up for each other and our mission",
+        "H3: Act for the global good",
+        "H3: Hold light and shade",
+        "H3: Be good to our users",
+        "H3: Ignite a race to the top on safety",
+        "H3: Do the simple thing that works",
+        "H3: Be helpful, honest, and harmless",
+        "H3: Put the mission first",
+        "H2: How we support you",
+        "H3: Health and wellness",
+        "H3: Compensation and support",
+        "H3: Additional benefits",
+        "H2: How we hire",
+        "H3: What we are looking for",
+        "H3: The interview process",
+        "H3: Your safety matters to us",
+        "H3: Privacy policies",
+        "H3: Applicant and interview accommodations",
+        "H2: Our policy for using AI in our application process",
+        "H2: Frequently asked questions",
+        "H3: Do you offer internships?",
+        "H3: Can I get feedback on my application or interview?",
+        "H3: Can I re-apply if I’m not selected?"
+      ],
+      "schemaTypes": [
+        "FAQPage"
+      ],
+      "wordCount": 1566,
+      "internalLinkCount": 38,
+      "author": null,
+      "datePublished": null,
+      "dateModified": null,
+      "geoSignals": {
+        "hasFaqSchema": true,
+        "hasTable": false,
+        "hasTldr": false,
+        "questionHeadings": 11,
+        "stats": 1,
+        "author": null,
+        "datePublished": null,
+        "dateModified": null
+      }
+    },
+    {
+      "url": "https://www.anthropic.com/candidate-ai-guidance",
+      "title": "Guidance on Candidates&#x27; AI Usage \\ Anthropic",
+      "metaDescription": "Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.",
+      "h1Count": 1,
+      "headings": [
+        "H1: How to collaborate with Claude during our hiring process",
+        "H2: How to collaborate with Claude during each stage of our process",
+        "H2: Examples of encouraged vs. not allowed usage",
+        "H2: Why these guidelines?",
+        "H2: How Anthropic uses Claude for hiring",
+        "H2: If you are designing a hiring process",
+        "H2: Example prompts for candidates",
+        "H3: Help me articulate the business impact more clearly in this team project description.",
+        "H3: Review my response to this application question for clarity and flow and provide suggestions.",
+        "H3: Help me explain this technical achievement in plain language to non-technical readers.",
+        "H3: What does Anthropic value in candidates based on their public materials?",
+        "H3: Generate practice questions for a machine learning engineer interview at an AI company.",
+        "H3: Help me structure my response to &#x27;tell me about yourself&#x27; for a 2-minute answer.",
+        "H3: Summarize Anthropic&#x27;s approach to Constitutional AI based on their published papers.",
+        "H3: Based on the Anthropic website, announcements, and recent news, what is the Anthropic culture like?",
+        "H3: Help me understand the technical challenges in AI alignment that Anthropic is working on.",
+        "H3: Products",
+        "H3: Models",
+        "H3: Solutions",
+        "H3: Claude Platform",
+        "H3: Resources",
+        "H3: Help and security",
+        "H3: Company",
+        "H3: Terms and policies"
+      ],
+      "schemaTypes": [],
+      "wordCount": 982,
+      "internalLinkCount": 36,
+      "author": null,
+      "datePublished": null,
+      "dateModified": null,
+      "geoSignals": {
+        "hasFaqSchema": false,
+        "hasTable": true,
+        "hasTldr": false,
+        "questionHeadings": 7,
+        "stats": 2,
+        "author": null,
+        "datePublished": null,
+        "dateModified": null
+      }
+    },
+    {
+      "url": "https://www.anthropic.com/",
+      "title": "Home \\ Anthropic",
+      "metaDescription": "Anthropic is an AI safety and research company that&#x27;s working to build reliable, interpretable, and steerable AI systems.",
+      "h1Count": 1,
+      "headings": [
+        "H1: AI research and products that put safety at the frontier",
+        "H2: What 81,000 people want from AI",
+        "H2: Latest releases",
+        "H3: Expanding Project Glasswing",
+        "H3: Claude Opus 4.8",
+        "H3: Introducing The Anthropic Institute",
+        "H2: At Anthropic, we build AI to serve humanity’s long-term well-being.",
+        "H2: ‍",
+        "H3: Core views on AI safety",
+        "H3: Anthropic’s Responsible Scaling Policy",
+        "H3: Anthropic Academy: Build and Learn with Claude",
+        "H3: Anthropic’s Economic Index",
+        "H3: Claude’s Constitution",
+        "H2: Footer",
+        "H3: Products",
+        "H3: Models",
+        "H3: Solutions",
+        "H3: Claude Platform",
+        "H3: Resources",
+        "H3: Help and security",
+        "H3: Company",
+        "H3: Terms and policies",
+        "H3: Cookie Settings",
+        "H6: Necessary",
+        "H6: Analytics"
+      ],
+      "schemaTypes": [],
+      "wordCount": 672,
+      "internalLinkCount": 80,
+      "author": null,
+      "datePublished": null,
+      "dateModified": null,
+      "geoSignals": {
+        "hasFaqSchema": false,
+        "hasTable": false,
+        "hasTldr": false,
+        "questionHeadings": 4,
+        "stats": 5,
+        "author": null,
+        "datePublished": null,
+        "dateModified": null
+      }
+    }
+  ],
+  "site": {
+    "origin": "https://www.anthropic.com",
+    "hasSitemap": true,
+    "hasLlmsTxt": false,
+    "sitemapCount": 457
+  }
+}

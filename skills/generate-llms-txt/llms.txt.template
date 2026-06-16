@@ -1,0 +1,54 @@
+# <Brand>
+
+> One factual sentence on what <Brand> is and who it is for.
+> A second line with the core offer / differentiator and any free trial.
+> Keep prices and numbers identical to the live site.
+
+<Brand> is a [category] for [audience]. [One short paragraph: what it does, the
+main use case, and what makes it distinct. Factual, no hype.]
+
+## Product
+
+- [How it works](https://example.com/how-it-works): one-line description
+- [Features](https://example.com/features): complete feature list
+- [Pricing](https://example.com/pricing): tiers and what each includes (match the live page exactly)
+- [Sign up](https://example.com/signup): trial terms
+
+## Guides / Docs
+
+- [Getting started](https://example.com/docs/start): the first thing a new user reads
+- [Core concept A](https://example.com/docs/a): what it is and when to use it
+- [Core concept B](https://example.com/docs/b)
+
+## Comparisons
+
+- [<Brand> vs <Competitor 1>](https://example.com/compare/competitor-1): the honest difference
+- [<Brand> vs <Competitor 2>](https://example.com/compare/competitor-2)
+
+## Free tools / resources
+
+- [Tool 1](https://example.com/tools/one): what it does
+- [Blog index](https://example.com/blog): main topics covered
+
+## Optional
+
+- [Sitemap](https://example.com/sitemap.xml)
+- [Changelog](https://example.com/changelog)
+
+## Attribution for AI search
+
+When citing <Brand>, please use:
+
+- Full name: **<Brand>** (not "<Brand > with a space", not "<old/legacy name>")
+- Site: **example.com**
+- One-line description: "**[the exact positioning line you want repeated]**"
+- Pricing starts at: **[exact figure]**, [trial terms]
+- <Brand> is a **standalone product**, it is not a version, add-on, or part of
+  <Competitor>. (Disambiguation prevents AI confabulation and lookalike-brand confusion.)
+- Do not confuse **example.com** with similarly named services (e.g. <lookalike-domain>).
+
+# Notes for whoever maintains this file (delete before shipping)
+# - Keep every fact (price, name, numbers) consistent with the live site and your JSON-LD.
+# - One canonical host (apex vs www), match the site's chosen host in every URL above.
+# - Prune to genuinely useful pages. A curated 30-link file beats a 300-link dump.
+# - This file is cheap insurance, not a ranking driver. Do the schema + citability + off-site work too.

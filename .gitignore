@@ -1,0 +1,19 @@
+node_modules/
+*.log
+.DS_Store
+seo-geo-audit.json
+*-audit.json
+!skills/seo-geo-audit/examples/*.json
+out/
+dist/
+.env
+
+# Python (tools/dataforseo)
+__pycache__/
+*.pyc
+.pytest_cache/
+# DataForSEO runtime artifacts (keep the .example files, ignore the real ones)
+tools/dataforseo/site.yaml
+tools/dataforseo/cache/
+tools/dataforseo/reports/
+tools/dataforseo/logs/

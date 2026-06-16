@@ -1,0 +1,31 @@
+bucket,query,intent_notes
+branded,"What is <brand>?",baseline brand recognition
+branded,"<brand> vs <top-competitor>",comparison query you should win
+branded,"Is <brand> good for <use-case>?",branded validation
+branded,"<brand> pricing",branded transactional
+branded,"alternatives to <brand>",defensive
+category,"best <category> tool for <audience>",high-value generic
+category,"top <category> software 2026",high-value generic
+category,"<category> tools compared",listicle-style
+category,"cheapest <category> for <audience>",price-led generic
+category,"<category> for <industry>",vertical generic
+category,"free <category> tool",free-intent generic
+category,"<category> with <key-feature>",feature-led generic
+category,"enterprise <category> solution",segment generic
+category,"<category> for small business",segment generic
+category,"open source <category>",segment generic
+problem,"how do I <job-to-be-done>?",problem-first
+problem,"how to <task> without <pain>?",problem-first
+problem,"why is <common-problem> happening?",problem-first
+problem,"what's the fastest way to <task>?",problem-first
+problem,"how much does <thing> cost?",problem-first
+problem,"is <thing> worth it?",problem-first
+problem,"how to choose a <category> tool?",problem-first
+problem,"<task> step by step",how-to
+problem,"common mistakes with <task>",how-to
+problem,"<thing> vs <other-thing>",comparison
+longtail,"<very-specific-niche-query-1>",niche, young brand can win
+longtail,"<very-specific-niche-query-2>",niche
+longtail,"<very-specific-niche-query-3>",niche
+longtail,"<very-specific-niche-query-4>",niche
+longtail,"<very-specific-niche-query-5>",niche

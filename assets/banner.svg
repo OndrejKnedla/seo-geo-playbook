@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="880" height="260" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2018"/>
+      <stop offset="0.55" stop-color="#0d1622"/>
+      <stop offset="1" stop-color="#0b0b12"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2ea44f"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+
+  <!-- card -->
+  <rect x="2" y="2" width="876" height="256" rx="18" fill="url(#bg)" stroke="#22402f" stroke-width="1.5"/>
+
+  <!-- watermark magnifying glass -->
+  <g opacity="0.10" transform="translate(706 56)">
+    <circle cx="60" cy="60" r="52" fill="none" stroke="url(#accent)" stroke-width="12"/>
+    <rect x="96" y="96" width="70" height="16" rx="8" transform="rotate(45 96 96)" fill="url(#accent)"/>
+  </g>
+
+  <!-- left accent bar -->
+  <rect x="2" y="2" width="6" height="256" rx="3" fill="url(#accent)"/>
+
+  <!-- eyebrow -->
+  <text x="440" y="76" text-anchor="middle" fill="#2dd4bf" font-size="16" font-weight="700" letter-spacing="5">🔍 SEO · GEO · AEO</text>
+
+  <!-- title -->
+  <text x="440" y="132" text-anchor="middle" fill="#ffffff" font-size="42" font-weight="800">Rank in Google, get cited by AI</text>
+
+  <!-- subtitle -->
+  <text x="440" y="170" text-anchor="middle" fill="#aebac0" font-size="17">Audit &#160;·&#160; A-F score &#160;·&#160; llms.txt &#160;·&#160; AI-citation tracking &#160;·&#160; fixes</text>
+
+  <!-- engines chip -->
+  <rect x="232" y="196" width="416" height="34" rx="17" fill="#0c1410" stroke="#2a4d3a"/>
+  <text x="440" y="218" text-anchor="middle" fill="#9fe6c4" font-size="13.5">cited by &#160;ChatGPT &#160;·&#160; Perplexity &#160;·&#160; Gemini &#160;·&#160; Claude</text>
+
+  <!-- by OK -->
+  <text x="852" y="244" text-anchor="end" fill="#5f7068" font-size="13">by OK</text>
+</svg>
